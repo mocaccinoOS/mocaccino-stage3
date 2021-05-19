@@ -43,8 +43,8 @@ jobs:
         PREVIOUS: ${{ github.event.before }}
       run: |
         curl https://get.mocaccino.org/luet/get_luet_root.sh | sudo sh
-        sudo luet build --all --destination=${PWD}/build --tree=${PWD}/packages ${{ env.BUILD_ARGS }}
-        sudo luet create-repo --name "mocaccino-stage3" --output ${PWD}/build --packages ${PWD}/build --tree ${PWD}/packages
+        sudo -E luet build --no-spinner --all --destination=${PWD}/build --tree=${PWD}/packages ${{ env.BUILD_ARGS }}
+        sudo -E luet create-repo --name "mocaccino-stage3" --output ${PWD}/build --packages ${PWD}/build --tree ${PWD}/packages
 
     - name: Deploy GH Pages 🚀
       if: github.ref == 'refs/heads/master' && github.event_name == 'push'
