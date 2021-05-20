@@ -1,0 +1,5 @@
+join:
+- name: "stage3"
+  category: "layers"
+  version: ">=0"
+unpack: true

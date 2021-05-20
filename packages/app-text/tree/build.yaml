@@ -1,0 +1,9 @@
+requires:
+- name: "stage3"
+  category: "system"
+  version: ">=0"
+
+prelude:
+- emerge-webrsync
+steps:
+- emerge app-text/tree
