@@ -2,7 +2,7 @@ name: Build
 
 on:
   push:
-    branches: [ master, test ]
+    branches: [ master, test2 ]
 jobs:
   build:
     runs-on: ubuntu-latest
