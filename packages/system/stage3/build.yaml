@@ -1,0 +1,9 @@
+image: "scratch"
+
+copy:
+- package:
+    name: "stage3"
+    category: "layers"
+    version: ">=0"
+  source: /gentoo/*
+  destination: /
