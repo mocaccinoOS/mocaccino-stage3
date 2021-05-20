@@ -12,3 +12,16 @@ steps:
 env:
 - LUET_YES=true
 - STAGE_VERSION={{ ( index .Values.labels "package.version" ) }}
+
+# Add some common excludes
+excludes:
+- ^/etc/shadow
+- ^/etc/os-release
+- ^/etc/gshadow
+- ^/etc/group
+- ^/etc/hostname
+- ^/etc/hosts
+- ^/etc/machine-id
+- ^/etc/fstab
+- ^/etc/passwd
+- ^/etc/machineid
