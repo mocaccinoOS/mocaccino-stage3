@@ -1,9 +1,46 @@
 image: "scratch"
 
 copy:
+# https://github.com/moby/moby/issues/15858
 - package:
     name: "stage3"
     category: "layers"
     version: ">=0"
-  source: /gentoo/*
-  destination: /
+  source: /gentoo/bin
+  destination: /bin
+- package:
+    name: "stage3"
+    category: "layers"
+    version: ">=0"
+  source: /gentoo/sbin
+  destination: /sbin
+- package:
+    name: "stage3"
+    category: "layers"
+    version: ">=0"
+  source: /gentoo/usr
+  destination: /usr
+- package:
+    name: "stage3"
+    category: "layers"
+    version: ">=0"
+  source: /gentoo/lib
+  destination: /lib
+- package:
+    name: "stage3"
+    category: "layers"
+    version: ">=0"
+  source: /gentoo/lib64
+  destination: /lib64
+- package:
+    name: "stage3"
+    category: "layers"
+    version: ">=0"
+  source: /gentoo/var
+  destination: /var
+- package:
+    name: "stage3"
+    category: "layers"
+    version: ">=0"
+  source: /gentoo/etc
+  destination: /etc
