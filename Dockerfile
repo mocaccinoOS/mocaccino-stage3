@@ -1,7 +1,6 @@
 # This image has luet only
 FROM quay.io/luet/base
-ADD conf/luet.yaml.docker /etc/luet/luet.yaml
-ADD conf/repos.conf.d/ /etc/luet/repos.conf.d
+ADD repository-index.yaml /etc/luet/repos.conf.d/
 
 ENV USER=root
 
@@ -9,7 +8,7 @@ SHELL ["/usr/bin/luet", "install", "-y", "-d"]
 
 RUN repository/mocaccino-stage3
 RUN repository/luet
-RUN utils/busybox
+RUN layers/stage3
 
 SHELL ["/bin/sh", "-c"]
 RUN luet install -y system/luet
