@@ -39,6 +39,7 @@ jobs:
         MINIO_ACCESS_KEY: ${{ secrets.MINIO_ACCESS_KEY }}
         MINIO_SECRET_KEY: ${{ secrets.MINIO_SECRET_KEY }}
       run: |
+        sudo luet install -y repository/mocaccino-extra-stable
         sudo luet install -y net-fs/minio-client
         mc alias set minio-ci $MINIO_API_URL $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
         mc cp --overwrite $PWD/build/ minio-ci/mocaccino-stage3
