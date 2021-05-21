@@ -4,6 +4,6 @@ requires:
   version: ">=0"
 
 prelude:
-- emerge --sync
+- emerge-webrsync
 steps:
 - emerge app-text/tree
