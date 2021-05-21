@@ -1,5 +1,4 @@
 join:
-- package:
-    name: "stage3"
-    category: "layers"
-    version: ">=0"
+- name: "stage3"
+  category: "layers"
+  version: ">=0"
