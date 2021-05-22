@@ -30,7 +30,6 @@ jobs:
     - name: Install and Build 🔧 # This example project is built using luet and outputs the result to the 'build' folder.
       run: |
         curl https://get.mocaccino.org/luet/get_luet_root.sh | sudo sh
-        sudo mkdir build
         sudo -E luet build --only-target-package --concurrency 1 --live-output --no-spinner --all --destination=${PWD}/build --tree=${PWD}/packages ${{ env.BUILD_ARGS }}
         sudo -E luet create-repo --name "mocaccino-stage3" --output ${PWD}/build --packages ${PWD}/build --tree ${PWD}/packages
     - name: Update repository 🚀
