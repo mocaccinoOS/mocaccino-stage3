@@ -23,7 +23,6 @@ excludes:
 - ^/etc/hostname
 - ^/etc/hosts
 - ^/etc/machine-id
-- ^/etc/fstab
 - ^/etc/passwd
 - ^/etc/machineid
 - ^/sys
