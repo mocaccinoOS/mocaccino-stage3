@@ -1,6 +1,6 @@
 category: "layers"
 name: "stage3"
-version: "0.20210519+1"
+version: "0.20210519"
 labels:
   package.version: "20210519T214503Z"
   autobump.strategy: "custom"
